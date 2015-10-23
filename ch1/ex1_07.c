@@ -17,9 +17,15 @@ typedef struct time {
 int compareTime(Time*, Time*);
 
 int main() {
-
+    Time *t1, *t2;
+    t1 = (Time*)malloc(sizeof(Time));
+    t2 = (Time*)malloc(sizeof(Time));
+    printf("Enter first time (format is hh mm): ");
+    scanf("%d %d", &(t1->hour), &(t1->min));
+    printf("Enter second time (format is hh mm): ");
+    scanf("%d %d", &(t2->hour), &(t2->min));
+    printf("Difference: %d\n", compareTime(t1, t2));
 }
-
 
 int compareTime(Time* t1, Time* t2) {
     int time;
@@ -28,4 +34,6 @@ int compareTime(Time* t1, Time* t2) {
     } else {
         time = (t2->hour - t1->hour) * 60;
     }
+    time += t2->min - t1->min;
+    return time;
 }
