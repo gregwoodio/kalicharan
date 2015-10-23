@@ -1,0 +1,38 @@
+Invalid vote: 11
+Invalid vote: 12
+Invalid vote: 13
+
+Number of voters: 32
+Number of valid voters: 29
+Number of spoilt votes: 3
+
+By Score
+Artist         	Score
+
+Taylor Swift      6
+Meghan Trainor    4
+Nikki Minaj       4
+Ed Sheeran        3
+Drake             3
+Walk the Moon     3
+Ellie Goulding    2
+Lana Del Ray      2
+Sam Smith         1
+Selena Gomez      1
+
+By Name
+Artist         	Score
+
+Drake             3
+Ed Sheeran        3
+Ellie Goulding    2
+Lana Del Ray      2
+Meghan Trainor    4
+Nikki Minaj       4
+Sam Smith         1
+Selena Gomez      1
+Taylor Swift      6
+Walk the Moon     3
+
+The Winner(s)
+Taylor Swift
