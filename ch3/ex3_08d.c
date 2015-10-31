@@ -47,7 +47,7 @@ int main() {
     printList(head);
     sorted = alphabeticalSort(head);
     printf("\nSorted: ");
-    printList(head);
+    printList(sorted);
     freeList(head);
     freeList(sorted);
 
