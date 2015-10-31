@@ -2,21 +2,11 @@
  * Data Structures in C by Noel Kalicharan
  * Chapter 3 Exercise 2
  *
- * Exercise 2: Write code to reverse the nodes of a linked list by 
- * manipulating the pointer fields only. No new nodes must be created.
+ * Write code to reverse the nodes of a linked list by manipulating
+ * the pointer fields only. No new nodes must be created.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct node {
-    int num;
-    struct node *next;
-} Node, *NodePtr;
-
-NodePtr mkNode(int);
-void printList(NodePtr);
-NodePtr reverse(NodePtr);
+#include "ex.h"
 
 int main() {
     NodePtr head = NULL, np, prev;
@@ -42,31 +32,4 @@ int main() {
     
     return 0;
 
-}
-
-NodePtr mkNode(int n) {
-    NodePtr np = (NodePtr) malloc(sizeof(Node));
-    np->num = n;
-    np->next = NULL;
-    return np;
-}
-
-NodePtr reverse(NodePtr head) {
-    NodePtr prev = NULL, np = head;
-    while (head != NULL) {
-        np = head;
-        head = head->next;
-        np->next = prev;
-        prev = np;
-    }
-    return np;
-}
-
-void printList(NodePtr head) {
-    NodePtr np = head;
-    while (np != NULL) {
-        printf("%d ", np->num);
-        np = np->next;
-    }
-    return;
 }
