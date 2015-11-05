@@ -121,3 +121,26 @@ int toDecimal(NodePtr np) {
     }
     return sum;
 }
+
+NodePtr addBinary(NodePtr b1, NodePtr b2, int carry) {
+    NodePtr sum;
+    int n;
+    if (b1 == NULL && b2 == NULL) {
+        return mkNode(carry);
+    } 
+    if (b1 == NULL) {
+        b1 = mkNode(0);
+    }
+    if (b2 == NULL) {
+        b2 = mkNode(0);
+    }
+    sum = mkNode(b1->num + b2->num + carry);
+    if (sum->num > 1) {
+        n = sum->num;
+        sum->num = sum->num % 2;
+        sum->next = addBinary(b1->next, b2->next, n / 2);
+    } else {
+        sum->next = addBinary(b1->next, b2->next, 0);
+    }
+    return sum;
+}

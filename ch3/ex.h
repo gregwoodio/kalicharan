@@ -19,3 +19,4 @@ void freeList(NodePtr);
 NodePtr insertAt(NodePtr, int, int);
 NodePtr toBinary(int);
 int toDecimal(NodePtr);
+NodePtr addBinary(NodePtr, NodePtr, int);
